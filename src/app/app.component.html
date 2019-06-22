@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <input type="text" placeholder="Enter name to generate QR Code" [(ngModel)]="qrcodename"><br>
+  <button (click)="generateQRCode()">Generate QR Code</button>
+  <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-element-type]="elementType" [qrc-value] = "value">
+  </ngx-qrcode><br>
+  <a [href]="href" *ngIf="display" (click)="downloadImage()" download>Download Image</a>
+</div>
+<router-outlet></router-outlet>
